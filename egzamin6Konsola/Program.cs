@@ -4,11 +4,19 @@
     {
         static void Main(string[] args)
         {
-            BibliotekaNarzedziowa.LiczSamogloski("Abba;;;to zespół ");
-            Console.WriteLine(BibliotekaNarzedziowa.licznik);
+            Console.WriteLine("Podaj tekst:");
 
-            BibliotekaNarzedziowa.UsunPowtorzenia("Abba;;;to zespół ");
-            Console.WriteLine(BibliotekaNarzedziowa.napisWyjsciowy);
+            string? tekst = Console.ReadLine();
+
+            Console.WriteLine("Liczba samogłosek w podanym tekście:");
+            Console.WriteLine(BibliotekaNarzedziowa.LiczSamogloski(tekst));
+
+            Console.WriteLine();
+
+            Console.WriteLine("Tekst bez powtórzeń obok siebie:");
+            Console.WriteLine(BibliotekaNarzedziowa.UsunPowtorzenia(tekst));
+
+
         }
     }
 }
